@@ -9,50 +9,66 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DashboardCollectionViewCell" customModule="unvrs_test_app" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="321" height="497"/>
-            <autoresizingMask key="autoresizingMask"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-IL-0wX" customClass="DashboardCollectionViewCell" customModule="unvrs_test_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="954" height="1104"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="321" height="497"/>
+                <rect key="frame" x="0.0" y="0.0" width="954" height="1104"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GNc-HR-0QC">
-                        <rect key="frame" x="24" y="61" width="273" height="294"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGF-Za-aZm" userLabel="Primary Label">
-                        <rect key="frame" x="24" y="339" width="273" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-kz-Xgk" userLabel="Secondary Label">
-                        <rect key="frame" x="24" y="376" width="273" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aey-iJ-tQV">
+                        <rect key="frame" x="0.0" y="0.0" width="954" height="1104"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GNc-HR-0QC">
+                                <rect key="frame" x="20" y="39.999999999999943" width="914" height="956.66666666666652"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGF-Za-aZm" userLabel="Title Label">
+                                <rect key="frame" x="20" y="1016.6666666666666" width="914" height="31.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-kz-Xgk" userLabel="Description Label">
+                                <rect key="frame" x="20" y="1064" width="914" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="DashboardCellColor"/>
+                        <constraints>
+                            <constraint firstItem="GNc-HR-0QC" firstAttribute="bottom" secondItem="KGF-Za-aZm" secondAttribute="top" constant="-20" id="1M8-0J-fDm"/>
+                            <constraint firstAttribute="bottom" secondItem="vfp-kz-Xgk" secondAttribute="bottom" constant="20" id="3co-qv-zbQ"/>
+                            <constraint firstAttribute="trailing" secondItem="GNc-HR-0QC" secondAttribute="trailing" constant="20" id="SaQ-Ap-7aN"/>
+                            <constraint firstItem="GNc-HR-0QC" firstAttribute="leading" secondItem="aey-iJ-tQV" secondAttribute="leading" constant="20" id="Xyd-LT-8pg"/>
+                            <constraint firstAttribute="trailing" secondItem="vfp-kz-Xgk" secondAttribute="trailing" constant="20" id="bCT-3g-7Jw"/>
+                            <constraint firstItem="vfp-kz-Xgk" firstAttribute="top" secondItem="KGF-Za-aZm" secondAttribute="bottom" constant="16" id="dSV-CK-nJz"/>
+                            <constraint firstItem="KGF-Za-aZm" firstAttribute="leading" secondItem="aey-iJ-tQV" secondAttribute="leading" constant="20" id="fp7-YS-GpX"/>
+                            <constraint firstItem="vfp-kz-Xgk" firstAttribute="leading" secondItem="aey-iJ-tQV" secondAttribute="leading" constant="20" id="iCr-Fc-a6j"/>
+                            <constraint firstAttribute="trailing" secondItem="KGF-Za-aZm" secondAttribute="trailing" constant="20" id="y74-2n-AdO"/>
+                            <constraint firstItem="GNc-HR-0QC" firstAttribute="top" secondItem="aey-iJ-tQV" secondAttribute="top" constant="40" id="zCf-5k-jZw"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" name="DashboardCellColor"/>
             <constraints>
-                <constraint firstItem="vfp-kz-Xgk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="4y5-nQ-GZM"/>
-                <constraint firstItem="vfp-kz-Xgk" firstAttribute="top" secondItem="KGF-Za-aZm" secondAttribute="bottom" constant="16" id="5pp-xi-NfW"/>
-                <constraint firstAttribute="trailing" secondItem="vfp-kz-Xgk" secondAttribute="trailing" constant="24" id="BRw-kg-FBg"/>
-                <constraint firstAttribute="trailing" secondItem="GNc-HR-0QC" secondAttribute="trailing" constant="24" id="Eja-VD-in1"/>
-                <constraint firstAttribute="trailing" secondItem="KGF-Za-aZm" secondAttribute="trailing" constant="24" id="Md5-iA-6mg"/>
-                <constraint firstItem="KGF-Za-aZm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="Qbw-iB-COS"/>
-                <constraint firstAttribute="bottom" secondItem="vfp-kz-Xgk" secondAttribute="bottom" constant="100" id="Tom-ZV-TlD"/>
-                <constraint firstItem="GNc-HR-0QC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="61" id="b4d-rV-yq3"/>
-                <constraint firstItem="GNc-HR-0QC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="24" id="oT1-E7-6af"/>
-                <constraint firstItem="GNc-HR-0QC" firstAttribute="bottom" secondItem="KGF-Za-aZm" secondAttribute="top" constant="16" id="v6a-HQ-yYA"/>
+                <constraint firstItem="aey-iJ-tQV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QqF-ch-XfA"/>
+                <constraint firstAttribute="trailing" secondItem="aey-iJ-tQV" secondAttribute="trailing" id="Xqa-OW-SLt"/>
+                <constraint firstAttribute="bottom" secondItem="aey-iJ-tQV" secondAttribute="bottom" id="k6i-nX-iNi"/>
+                <constraint firstItem="aey-iJ-tQV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mOO-7C-ncA"/>
             </constraints>
-            <size key="customSize" width="321" height="497"/>
-            <point key="canvasLocation" x="179.38931297709922" y="177.11267605633805"/>
+            <size key="customSize" width="954" height="1104"/>
+            <connections>
+                <outlet property="container" destination="aey-iJ-tQV" id="wUJ-rn-3lI"/>
+                <outlet property="descriptionLabel" destination="vfp-kz-Xgk" id="UEy-a5-1HU"/>
+                <outlet property="imageView" destination="GNc-HR-0QC" id="kAr-Uu-wr3"/>
+                <outlet property="titleLabel" destination="KGF-Za-aZm" id="ugH-dX-3C0"/>
+            </connections>
+            <point key="canvasLocation" x="662.59541984732823" y="390.84507042253523"/>
         </collectionViewCell>
     </objects>
     <resources>
         <namedColor name="DashboardCellColor">
-            <color red="0.015686274509803921" green="0.35686274509803922" blue="0.60392156862745094" alpha="0.23999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.015686274509803921" green="0.35686274509803922" blue="0.60392156862745094" alpha="0.23999999463558197" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
