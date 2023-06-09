@@ -19,20 +19,23 @@ class DashboardView: UIView {
     // MARK: Public
 
     public func configure() {
+        self.button?.setTitle("Continue", for: .normal)
+        self.button?.tintColor = .black
+        
         self.backgroundColor = UIColor(patternImage: UIImage(named: "Background.png") ?? UIImage())
     }
     
     func flowLayoutConfigure() {
-        let itemWidth = UIScreen.main.bounds.width
+        let itemWidth = UIScreen.main.bounds.width - 62
         let itemHeight = self.collectionView?.frame.size.height
-        let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: itemWidth, height: itemHeight ?? 0)
-        layout.minimumLineSpacing = 0
+        let layout = PagingCollectionViewLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 31, bottom: 0, right: 31)
+        layout.itemSize = CGSize(width: itemWidth, height: 605)
+        layout.minimumLineSpacing = 16
         layout.scrollDirection = .horizontal
         layout.collectionView?.showsHorizontalScrollIndicator = false
         self.collectionView?.collectionViewLayout = layout
-        self.collectionView?.isPagingEnabled = true
+        self.collectionView?.isPagingEnabled = false
     }
     
     // MARK: -

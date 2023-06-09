@@ -7,12 +7,17 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController, RootViewGettable, UICollectionViewDataSource {
+class DashboardViewController: UIViewController, RootViewGettable, UICollectionViewDataSource, UICollectionViewDelegate {
 
     // MARK: -
     // MARK: Typealiases
     
     typealias RootView = DashboardView
+    
+    // MARK: -
+    // MARK: Variables
+    
+    private var contentModels: [DashboardContentModel] = []
     
     // MARK: -
     // MARK: Life Cycle
@@ -24,6 +29,16 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
         self.rootView?.collectionView?.register(cellClass: DashboardCollectionViewCell.self)
         self.rootView?.configure()
         self.rootView?.flowLayoutConfigure()
+        self.fillContentModels()
+    }
+    
+    // MARK: -
+    // MARK: Private
+    
+    private func fillContentModels() {
+        for model in DashboardContentModel.allCases {
+            self.contentModels.append(model)
+        }
     }
     
     // MARK: -
@@ -35,7 +50,8 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(cellClass: DashboardCollectionViewCell.self, indexPath: indexPath)
-        
+        cell.configure(model: self.contentModels[indexPath.row])
+
         return cell
     }
 }

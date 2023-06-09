@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		222CB3D62A2DE52F000616C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CB3D52A2DE52F000616C2 /* AppDelegate.swift */; };
-		222CB3DA2A2DE52F000616C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CB3D92A2DE52F000616C2 /* ViewController.swift */; };
 		222CB3DF2A2DE531000616C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222CB3DE2A2DE531000616C2 /* Assets.xcassets */; };
 		222CB3E22A2DE531000616C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222CB3E02A2DE531000616C2 /* LaunchScreen.storyboard */; };
 		222CB3EE2A2E0552000616C2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CB3ED2A2E0552000616C2 /* Coordinator.swift */; };
@@ -19,12 +18,22 @@
 		222CB4002A2E129B000616C2 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CB3FE2A2E129B000616C2 /* DashboardCollectionViewCell.swift */; };
 		222CB4012A2E129B000616C2 /* DashboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222CB3FF2A2E129B000616C2 /* DashboardCollectionViewCell.xib */; };
 		222CB4032A2E1E74000616C2 /* CollectionView+ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CB4022A2E1E74000616C2 /* CollectionView+ReusableCell.swift */; };
+		222CB4072A2E662C000616C2 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CB4062A2E662C000616C2 /* PagingCollectionViewLayout.swift */; };
+		222CB40A2A2E73E7000616C2 /* DashboardContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CB4092A2E73E7000616C2 /* DashboardContentModel.swift */; };
+		222CB4172A2E79DD000616C2 /* SFPRODISPLAYREGULAR.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB40E2A2E79DD000616C2 /* SFPRODISPLAYREGULAR.OTF */; };
+		222CB4182A2E79DD000616C2 /* SFPRODISPLAYTHINITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB40F2A2E79DD000616C2 /* SFPRODISPLAYTHINITALIC.OTF */; };
+		222CB4192A2E79DD000616C2 /* SFPRODISPLAYBLACKITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4102A2E79DD000616C2 /* SFPRODISPLAYBLACKITALIC.OTF */; };
+		222CB41A2A2E79DD000616C2 /* SFPRODISPLAYLIGHTITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4112A2E79DD000616C2 /* SFPRODISPLAYLIGHTITALIC.OTF */; };
+		222CB41B2A2E79DD000616C2 /* SFPRODISPLAYBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4122A2E79DD000616C2 /* SFPRODISPLAYBOLD.OTF */; };
+		222CB41C2A2E79DD000616C2 /* SFPRODISPLAYSEMIBOLDITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4132A2E79DD000616C2 /* SFPRODISPLAYSEMIBOLDITALIC.OTF */; };
+		222CB41D2A2E79DD000616C2 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4142A2E79DD000616C2 /* SFPRODISPLAYMEDIUM.OTF */; };
+		222CB41E2A2E79DD000616C2 /* SFPRODISPLAYHEAVYITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4152A2E79DD000616C2 /* SFPRODISPLAYHEAVYITALIC.OTF */; };
+		222CB41F2A2E79DD000616C2 /* SFPRODISPLAYULTRALIGHTITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4162A2E79DD000616C2 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		222CB3D22A2DE52F000616C2 /* unvrs_test_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unvrs_test_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		222CB3D52A2DE52F000616C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		222CB3D92A2DE52F000616C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		222CB3DE2A2DE531000616C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		222CB3E12A2DE531000616C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		222CB3E32A2DE531000616C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +45,17 @@
 		222CB3FE2A2E129B000616C2 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		222CB3FF2A2E129B000616C2 /* DashboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardCollectionViewCell.xib; sourceTree = "<group>"; };
 		222CB4022A2E1E74000616C2 /* CollectionView+ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+ReusableCell.swift"; sourceTree = "<group>"; };
+		222CB4062A2E662C000616C2 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
+		222CB4092A2E73E7000616C2 /* DashboardContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardContentModel.swift; sourceTree = "<group>"; };
+		222CB40E2A2E79DD000616C2 /* SFPRODISPLAYREGULAR.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYREGULAR.OTF; sourceTree = "<group>"; };
+		222CB40F2A2E79DD000616C2 /* SFPRODISPLAYTHINITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYTHINITALIC.OTF; sourceTree = "<group>"; };
+		222CB4102A2E79DD000616C2 /* SFPRODISPLAYBLACKITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYBLACKITALIC.OTF; sourceTree = "<group>"; };
+		222CB4112A2E79DD000616C2 /* SFPRODISPLAYLIGHTITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYLIGHTITALIC.OTF; sourceTree = "<group>"; };
+		222CB4122A2E79DD000616C2 /* SFPRODISPLAYBOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYBOLD.OTF; sourceTree = "<group>"; };
+		222CB4132A2E79DD000616C2 /* SFPRODISPLAYSEMIBOLDITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYSEMIBOLDITALIC.OTF; sourceTree = "<group>"; };
+		222CB4142A2E79DD000616C2 /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
+		222CB4152A2E79DD000616C2 /* SFPRODISPLAYHEAVYITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYHEAVYITALIC.OTF; sourceTree = "<group>"; };
+		222CB4162A2E79DD000616C2 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYULTRALIGHTITALIC.OTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +88,10 @@
 		222CB3D42A2DE52F000616C2 /* unvrs_test_app */ = {
 			isa = PBXGroup;
 			children = (
+				222CB40B2A2E7946000616C2 /* Libs */,
 				222CB3EA2A2DFBA7000616C2 /* Coordinators */,
 				222CB3E92A2DFB9B000616C2 /* Source */,
 				222CB3D52A2DE52F000616C2 /* AppDelegate.swift */,
-				222CB3D92A2DE52F000616C2 /* ViewController.swift */,
 				222CB3DE2A2DE531000616C2 /* Assets.xcassets */,
 				222CB3E02A2DE531000616C2 /* LaunchScreen.storyboard */,
 				222CB3E32A2DE531000616C2 /* Info.plist */,
@@ -83,7 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				222CB3EF2A2E0722000616C2 /* UI */,
+				222CB4082A2E73C0000616C2 /* Models */,
 				222CB3F92A2E11B8000616C2 /* F */,
+				222CB4062A2E662C000616C2 /* PagingCollectionViewLayout.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -149,6 +171,46 @@
 			path = DashboardCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		222CB4082A2E73C0000616C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				222CB4092A2E73E7000616C2 /* DashboardContentModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		222CB40B2A2E7946000616C2 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				222CB40C2A2E794C000616C2 /* Resource */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		222CB40C2A2E794C000616C2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				222CB40D2A2E7954000616C2 /* Fonts */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		222CB40D2A2E7954000616C2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				222CB4102A2E79DD000616C2 /* SFPRODISPLAYBLACKITALIC.OTF */,
+				222CB4122A2E79DD000616C2 /* SFPRODISPLAYBOLD.OTF */,
+				222CB4152A2E79DD000616C2 /* SFPRODISPLAYHEAVYITALIC.OTF */,
+				222CB4112A2E79DD000616C2 /* SFPRODISPLAYLIGHTITALIC.OTF */,
+				222CB4142A2E79DD000616C2 /* SFPRODISPLAYMEDIUM.OTF */,
+				222CB40E2A2E79DD000616C2 /* SFPRODISPLAYREGULAR.OTF */,
+				222CB4132A2E79DD000616C2 /* SFPRODISPLAYSEMIBOLDITALIC.OTF */,
+				222CB40F2A2E79DD000616C2 /* SFPRODISPLAYTHINITALIC.OTF */,
+				222CB4162A2E79DD000616C2 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,9 +269,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222CB41D2A2E79DD000616C2 /* SFPRODISPLAYMEDIUM.OTF in Resources */,
+				222CB41A2A2E79DD000616C2 /* SFPRODISPLAYLIGHTITALIC.OTF in Resources */,
+				222CB41F2A2E79DD000616C2 /* SFPRODISPLAYULTRALIGHTITALIC.OTF in Resources */,
+				222CB4182A2E79DD000616C2 /* SFPRODISPLAYTHINITALIC.OTF in Resources */,
+				222CB4192A2E79DD000616C2 /* SFPRODISPLAYBLACKITALIC.OTF in Resources */,
 				222CB3E22A2DE531000616C2 /* LaunchScreen.storyboard in Resources */,
+				222CB41B2A2E79DD000616C2 /* SFPRODISPLAYBOLD.OTF in Resources */,
 				222CB3DF2A2DE531000616C2 /* Assets.xcassets in Resources */,
+				222CB41C2A2E79DD000616C2 /* SFPRODISPLAYSEMIBOLDITALIC.OTF in Resources */,
 				222CB3F52A2E0762000616C2 /* DashboardViewController.xib in Resources */,
+				222CB41E2A2E79DD000616C2 /* SFPRODISPLAYHEAVYITALIC.OTF in Resources */,
+				222CB4172A2E79DD000616C2 /* SFPRODISPLAYREGULAR.OTF in Resources */,
 				222CB4012A2E129B000616C2 /* DashboardCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,8 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				222CB3DA2A2DE52F000616C2 /* ViewController.swift in Sources */,
+				222CB40A2A2E73E7000616C2 /* DashboardContentModel.swift in Sources */,
 				222CB3D62A2DE52F000616C2 /* AppDelegate.swift in Sources */,
+				222CB4072A2E662C000616C2 /* PagingCollectionViewLayout.swift in Sources */,
 				222CB3F82A2E07A0000616C2 /* DashboardView.swift in Sources */,
 				222CB4032A2E1E74000616C2 /* CollectionView+ReusableCell.swift in Sources */,
 				222CB3EE2A2E0552000616C2 /* Coordinator.swift in Sources */,
