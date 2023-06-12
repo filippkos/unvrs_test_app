@@ -16,6 +16,14 @@ class DashboardCollectionViewCell: UICollectionViewCell {
     @IBOutlet var titleLabel: UILabel?
     @IBOutlet var descriptionLabel: UILabel?
     @IBOutlet var container: UIView?
+    
+    // MARK: -
+    // MARK: Variables
+    
+    var index: Int = 0
+    
+    // MARK: -
+    // MARK: Life Cycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,7 +41,8 @@ class DashboardCollectionViewCell: UICollectionViewCell {
         self.descriptionLabel?.textColor = .white
     }
     
-    public func configure(model: DashboardContentModel) {
+    public func configure(model: DashboardContentModel, index: Int) {
+        self.index = index
         self.imageView?.image = model.image
         self.titleLabel?.text = model.title
         self.descriptionLabel?.text = model.description

@@ -29,6 +29,7 @@
 		222CB41D2A2E79DD000616C2 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4142A2E79DD000616C2 /* SFPRODISPLAYMEDIUM.OTF */; };
 		222CB41E2A2E79DD000616C2 /* SFPRODISPLAYHEAVYITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4152A2E79DD000616C2 /* SFPRODISPLAYHEAVYITALIC.OTF */; };
 		222CB41F2A2E79DD000616C2 /* SFPRODISPLAYULTRALIGHTITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4162A2E79DD000616C2 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */; };
+		22D6AE212A36193C00103A63 /* Pager View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6AE202A36193C00103A63 /* Pager View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		222CB4142A2E79DD000616C2 /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
 		222CB4152A2E79DD000616C2 /* SFPRODISPLAYHEAVYITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYHEAVYITALIC.OTF; sourceTree = "<group>"; };
 		222CB4162A2E79DD000616C2 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYULTRALIGHTITALIC.OTF; sourceTree = "<group>"; };
+		22D6AE202A36193C00103A63 /* Pager View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pager View.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		222CB3EF2A2E0722000616C2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				22D6AE1F2A36191E00103A63 /* Views */,
 				222CB3F02A2E0732000616C2 /* ViewControllers */,
 			);
 			path = UI;
@@ -211,6 +214,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		22D6AE1F2A36191E00103A63 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22D6AE202A36193C00103A63 /* Pager View.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222CB40A2A2E73E7000616C2 /* DashboardContentModel.swift in Sources */,
+				22D6AE212A36193C00103A63 /* Pager View.swift in Sources */,
 				222CB3D62A2DE52F000616C2 /* AppDelegate.swift in Sources */,
 				222CB4072A2E662C000616C2 /* PagingCollectionViewLayout.swift in Sources */,
 				222CB3F82A2E07A0000616C2 /* DashboardView.swift in Sources */,

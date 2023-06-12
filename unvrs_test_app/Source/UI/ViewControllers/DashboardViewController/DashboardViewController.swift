@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController, RootViewGettable, UICollectionViewDataSource, UICollectionViewDelegate {
+class DashboardViewController: UIViewController, RootViewGettable, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ScrollToPageProtocol {
 
     // MARK: -
     // MARK: Typealiases
@@ -26,6 +26,8 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
         super.viewDidLoad()
         
         self.rootView?.collectionView?.dataSource = self
+        self.rootView?.collectionView?.delegate = self
+        self.rootView?.pager?.scrollDelegate = self
         self.rootView?.collectionView?.register(cellClass: DashboardCollectionViewCell.self)
         self.rootView?.configure()
         self.rootView?.flowLayoutConfigure()
@@ -41,6 +43,10 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
         }
     }
     
+    func scrollTo(page: IndexPath) {
+        self.rootView?.collectionView?.scrollToItem(at: page, at: .centeredHorizontally, animated: true)
+    }
+    
     // MARK: -
     // MARK: CollectionView DataSource
     
@@ -50,8 +56,22 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(cellClass: DashboardCollectionViewCell.self, indexPath: indexPath)
-        cell.configure(model: self.contentModels[indexPath.row])
+        cell.configure(model: self.contentModels[indexPath.row], index: indexPath.row)
 
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemWidth = collectionView.frame.size.width - 62
+        let itemHeight = collectionView.frame.size.height
+        
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
+    
+    // MARK: -
+    // MARK: CollectionView Delegate
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.rootView?.configurePager()
     }
 }
