@@ -14,6 +14,13 @@ class DashboardView: UIView {
     
     @IBOutlet var collectionView: UICollectionView?
     @IBOutlet var button: UIButton?
+    @IBOutlet var pager: PagerView?
+    
+    // MARK: -
+    // MARK: Variables
+    
+    let cellHorizontalInsets: CGFloat = 31
+    let spacingBetweenCells: CGFloat = 16
     
     // MARK: -
     // MARK: Public
@@ -25,13 +32,29 @@ class DashboardView: UIView {
         self.backgroundColor = UIColor(patternImage: UIImage(named: "Background.png") ?? UIImage())
     }
     
+    public func configurePager() {
+        let offsetStep = self.frame.width - (self.cellHorizontalInsets * 2) + self.spacingBetweenCells
+        let xPosition = (self.collectionView?.contentOffset.x ?? 0) + offsetStep
+        let dividend = (xPosition / offsetStep)
+        if !(dividend.isNaN || dividend.isInfinite) {
+            let rounded = Int(round(dividend))
+            let index = rounded - 1
+            self.pager?.updateViews(number: index)
+        }
+    }
+    
     func flowLayoutConfigure() {
-        let itemWidth = UIScreen.main.bounds.width - 62
+        let itemWidth = UIScreen.main.bounds.width - (self.cellHorizontalInsets * 2)
         let itemHeight = self.collectionView?.frame.size.height
         let layout = PagingCollectionViewLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 31, bottom: 0, right: 31)
-        layout.itemSize = CGSize(width: itemWidth, height: 605)
-        layout.minimumLineSpacing = 16
+        layout.sectionInset = UIEdgeInsets(
+            top: 0,
+            left: self.cellHorizontalInsets,
+            bottom: 0,
+            right: self.cellHorizontalInsets
+        )
+        layout.itemSize = CGSize(width: itemWidth, height: itemHeight ?? 0)
+        layout.minimumLineSpacing = self.spacingBetweenCells
         layout.scrollDirection = .horizontal
         layout.collectionView?.showsHorizontalScrollIndicator = false
         self.collectionView?.collectionViewLayout = layout
