@@ -1,0 +1,6 @@
+framework module Pods_unvrs_test_app {
+  umbrella header "Pods-unvrs_test_app-umbrella.h"
+
+  export *
+  module * { export * }
+}

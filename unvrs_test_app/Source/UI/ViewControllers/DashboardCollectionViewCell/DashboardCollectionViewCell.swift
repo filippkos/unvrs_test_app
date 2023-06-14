@@ -39,6 +39,17 @@ class DashboardCollectionViewCell: UICollectionViewCell {
         
         self.descriptionLabel?.font = UIFont(name: "SF Pro Display Medium", size: 17)
         self.descriptionLabel?.textColor = .white
+        self.prepareBlurView()
+    }
+    
+    private func prepareBlurView() {
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        blurEffectView.alpha = 0.5
+        blurEffectView.backgroundColor = UIColor(hue: 0.6, saturation: 0.8, brightness: 0.5, alpha: 0.24)
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.insertSubview(blurEffectView, at: 0)
     }
     
     public func configure(model: DashboardContentModel, index: Int) {
