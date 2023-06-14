@@ -7,6 +7,9 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+
 class DashboardViewController: UIViewController, RootViewGettable, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ScrollToPageProtocol {
 
     // MARK: -
@@ -18,6 +21,9 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
     // MARK: Variables
     
     private var contentModels: [DashboardContentModel] = []
+    
+    private let numberOfPages = 4
+    private let dispose = DisposeBag()
     
     // MARK: -
     // MARK: Life Cycle
@@ -32,6 +38,23 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
         self.rootView?.configure()
         self.rootView?.flowLayoutConfigure()
         self.fillContentModels()
+        self.bind()
+    }
+    
+    // MARK: -
+    // MARK: Public
+    
+    private func bind() {
+        self.rootView?.button?
+            .rx
+            .tap
+            .bind { [weak self] in
+                let currentPage = self?.rootView?.pager?.actualPage
+                if currentPage ?? 0 < (self?.numberOfPages ?? 0) - 1 {
+                    self?.scrollTo(page: IndexPath(row: (currentPage ?? 0) + 1, section: 0))
+                }
+            }
+            .self.disposed(by: self.dispose)
     }
     
     // MARK: -
@@ -51,7 +74,7 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
     // MARK: CollectionView DataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        self.numberOfPages
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -53,16 +53,18 @@ class PagerView: UICollectionView, UICollectionViewDataSource, UICollectionViewD
     // MARK: Public
     
     func updateViews(number: Int) {
-        self.actualPage = number
-        arrayOfViews.forEach {
-            $0.subviews.first?.backgroundColor = UIColor(named: "PagerGrey")
-            $0.frame.size.width = CGFloat(self.disabledContainerWidth)
-            $0.subviews.first?.frame.size.width = CGFloat(self.disabledContainerWidth)
+        if number >= 0 && number < self.numberOfPages {
+            self.actualPage = number
+            arrayOfViews.forEach {
+                $0.subviews.first?.backgroundColor = UIColor(named: "PagerGrey")
+                $0.frame.size.width = CGFloat(self.disabledContainerWidth)
+                $0.subviews.first?.frame.size.width = CGFloat(self.disabledContainerWidth)
+            }
+            self.arrayOfViews[number].subviews.first?.backgroundColor = UIColor(named: "PagerBlue")
+            self.arrayOfViews[number].frame.size.width = CGFloat(self.enabledContainerWidth)
+            self.arrayOfViews[number].subviews.first?.frame.size.width = CGFloat(self.enabledContainerWidth)
+            self.reloadData()
         }
-        self.arrayOfViews[number].subviews.first?.backgroundColor = UIColor(named: "PagerBlue")
-        self.arrayOfViews[number].frame.size.width = CGFloat(self.enabledContainerWidth)
-        self.arrayOfViews[number].subviews.first?.frame.size.width = CGFloat(self.enabledContainerWidth)
-        self.reloadData()
     }
     
     // MARK: -
