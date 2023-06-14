@@ -7,6 +7,14 @@
 
 import UIKit
 
+enum TermsMessage {
+    
+    public static let firstPart = "By continuing you accept our:\n"
+    public static let secondPart = "Terms of Use, Privacy Policy "
+    public static let thirdPart = "and "
+    public static let fourthPart = "Subscription Terms"
+}
+
 class DashboardView: UIView {
     
     // MARK: -
@@ -15,6 +23,7 @@ class DashboardView: UIView {
     @IBOutlet var collectionView: UICollectionView?
     @IBOutlet var button: UIButton?
     @IBOutlet var pager: PagerView?
+    @IBOutlet var termsLabel: UILabel?
     
     // MARK: -
     // MARK: Variables
@@ -30,6 +39,8 @@ class DashboardView: UIView {
         self.button?.tintColor = .black
         
         self.backgroundColor = UIColor(patternImage: UIImage(named: "Background.png") ?? UIImage())
+        self.prepareAttributedTermsMessage()
+        self.updateTermsMessage(visibility: true)
     }
     
     public func configurePager() {
@@ -40,6 +51,14 @@ class DashboardView: UIView {
             let rounded = Int(round(dividend))
             let index = rounded - 1
             self.pager?.updateViews(number: index)
+        }
+    }
+    
+    public func handleTermsMessageVisibility() {
+        if self.pager?.actualPage == 0 || self.pager?.actualPage == 3 {
+            self.updateTermsMessage(visibility: true)
+        } else {
+            self.updateTermsMessage(visibility: false)
         }
     }
     
@@ -59,6 +78,22 @@ class DashboardView: UIView {
         layout.collectionView?.showsHorizontalScrollIndicator = false
         self.collectionView?.collectionViewLayout = layout
         self.collectionView?.isPagingEnabled = false
+    }
+    
+    // MARK: -
+    // MARK: Private
+    
+    private func updateTermsMessage(visibility: Bool) {
+        self.termsLabel?.alpha = visibility ? 1 : 0
+        self.pager?.alpha = visibility ? 0 : 1
+    }
+    
+    private func prepareAttributedTermsMessage() {
+        self.termsLabel?.font = UIFont(name: "SF Pro Display Regular", size: 12)
+        self.termsLabel?.text = TermsMessage.firstPart
+            + TermsMessage.secondPart
+            + TermsMessage.thirdPart
+            + TermsMessage.fourthPart
     }
     
     // MARK: -

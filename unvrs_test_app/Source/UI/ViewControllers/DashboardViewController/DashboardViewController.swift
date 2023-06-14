@@ -96,5 +96,6 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.rootView?.configurePager()
+        self.rootView?.handleTermsMessageVisibility()
     }
 }
