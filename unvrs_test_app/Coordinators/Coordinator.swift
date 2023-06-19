@@ -25,6 +25,15 @@ class Coordinator {
     private func prepareDashBoardViewController() {
         let controller = DashboardViewController()
         
+        controller.outputEvents = { [weak self] event in
+            switch event {
+            case .showTermsOfUseAndPrivacyPolicy:
+                print("showTermsOfUseAndPrivacyPolicy")
+            case .showSubscriptionTerms:
+                print("showSubscriptionTerms")
+            }
+        }
+        
         self.navigationController.setViewControllers([controller], animated: true)
     }
 }

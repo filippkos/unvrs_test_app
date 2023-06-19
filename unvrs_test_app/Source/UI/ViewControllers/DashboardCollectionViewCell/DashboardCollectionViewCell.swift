@@ -31,6 +31,9 @@ class DashboardCollectionViewCell: UICollectionViewCell {
         self.configureUI()
     }
     
+    // MARK: -
+    // MARK: Private
+    
     private func configureUI() {
         self.container?.layer.cornerRadius = 20
         self.container?.layer.masksToBounds = true
@@ -58,6 +61,9 @@ class DashboardCollectionViewCell: UICollectionViewCell {
         self.titleLabel?.text = model.title
         self.descriptionLabel?.text = model.description
     }
+    
+    // MARK: -
+    // MARK: Overrided
     
     override func layoutSubviews() {
         super.layoutSubviews()

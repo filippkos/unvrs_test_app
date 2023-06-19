@@ -29,7 +29,7 @@
 		222CB41D2A2E79DD000616C2 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4142A2E79DD000616C2 /* SFPRODISPLAYMEDIUM.OTF */; };
 		222CB41E2A2E79DD000616C2 /* SFPRODISPLAYHEAVYITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4152A2E79DD000616C2 /* SFPRODISPLAYHEAVYITALIC.OTF */; };
 		222CB41F2A2E79DD000616C2 /* SFPRODISPLAYULTRALIGHTITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 222CB4162A2E79DD000616C2 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */; };
-		22D6AE212A36193C00103A63 /* Pager View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6AE202A36193C00103A63 /* Pager View.swift */; };
+		22D6AE212A36193C00103A63 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6AE202A36193C00103A63 /* PagerView.swift */; };
 		632B04824D667232CC1812DC /* Pods_unvrs_test_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF15AC314A1EBFFA310467BB /* Pods_unvrs_test_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +59,7 @@
 		222CB4142A2E79DD000616C2 /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
 		222CB4152A2E79DD000616C2 /* SFPRODISPLAYHEAVYITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYHEAVYITALIC.OTF; sourceTree = "<group>"; };
 		222CB4162A2E79DD000616C2 /* SFPRODISPLAYULTRALIGHTITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYULTRALIGHTITALIC.OTF; sourceTree = "<group>"; };
-		22D6AE202A36193C00103A63 /* Pager View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pager View.swift"; sourceTree = "<group>"; };
+		22D6AE202A36193C00103A63 /* PagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerView.swift; sourceTree = "<group>"; };
 		DD73E78B7B38465D59FADE34 /* Pods-unvrs_test_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unvrs_test_app.debug.xcconfig"; path = "Target Support Files/Pods-unvrs_test_app/Pods-unvrs_test_app.debug.xcconfig"; sourceTree = "<group>"; };
 		FF15AC314A1EBFFA310467BB /* Pods_unvrs_test_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unvrs_test_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,8 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				222CB3F22A2E0762000616C2 /* DashboardViewController.swift */,
-				222CB3F32A2E0762000616C2 /* DashboardViewController.xib */,
 				222CB3F72A2E07A0000616C2 /* DashboardView.swift */,
+				222CB3F32A2E0762000616C2 /* DashboardViewController.xib */,
 			);
 			path = DashboardViewController;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 		22D6AE1F2A36191E00103A63 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				22D6AE202A36193C00103A63 /* Pager View.swift */,
+				22D6AE202A36193C00103A63 /* PagerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,7 +243,6 @@
 				DD73E78B7B38465D59FADE34 /* Pods-unvrs_test_app.debug.xcconfig */,
 				1DFEDD3D3CDA189218B254E1 /* Pods-unvrs_test_app.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -373,7 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222CB40A2A2E73E7000616C2 /* DashboardContentModel.swift in Sources */,
-				22D6AE212A36193C00103A63 /* Pager View.swift in Sources */,
+				22D6AE212A36193C00103A63 /* PagerView.swift in Sources */,
 				222CB3D62A2DE52F000616C2 /* AppDelegate.swift in Sources */,
 				222CB4072A2E662C000616C2 /* PagingCollectionViewLayout.swift in Sources */,
 				222CB3F82A2E07A0000616C2 /* DashboardView.swift in Sources */,

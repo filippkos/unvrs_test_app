@@ -5,12 +5,12 @@
 //  Created by Filipp Kosenko on 11.06.2023.
 //
 
+import UIKit
+
 protocol ScrollToPageProtocol {
     
     func scrollTo(page: IndexPath)
 }
-
-import UIKit
 
 class PagerView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
@@ -56,7 +56,7 @@ class PagerView: UICollectionView, UICollectionViewDataSource, UICollectionViewD
         if number >= 0 && number < self.numberOfPages {
             self.actualPage = number
             arrayOfViews.forEach {
-                $0.subviews.first?.backgroundColor = UIColor(named: "PagerGrey")
+                $0.subviews.first?.backgroundColor = UIColor(named: "PagerGray")
                 $0.frame.size.width = CGFloat(self.disabledContainerWidth)
                 $0.subviews.first?.frame.size.width = CGFloat(self.disabledContainerWidth)
             }
