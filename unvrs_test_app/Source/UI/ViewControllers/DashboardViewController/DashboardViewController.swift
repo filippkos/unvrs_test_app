@@ -10,6 +10,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+enum DashboardViewControllerOutputEvents {
+    
+    case showTermsOfUseAndPrivacyPolicy
+    case showSubscriptionTerms
+}
+
 class DashboardViewController: UIViewController, RootViewGettable, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ScrollToPageProtocol {
 
     // MARK: -
@@ -20,8 +26,9 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
     // MARK: -
     // MARK: Variables
     
+    public var outputEvents: ((DashboardViewControllerOutputEvents)->())?
     private var contentModels: [DashboardContentModel] = []
-    
+
     private let numberOfPages = 4
     private let dispose = DisposeBag()
     
@@ -35,8 +42,14 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
         self.rootView?.collectionView?.delegate = self
         self.rootView?.pager?.scrollDelegate = self
         self.rootView?.collectionView?.register(cellClass: DashboardCollectionViewCell.self)
-        self.rootView?.configure()
-        self.rootView?.flowLayoutConfigure()
+        self.rootView?.configure(outputEvents: { [weak self] event in
+            switch event {
+            case .showTermsOfUseAndPrivacyPolicy:
+                self?.outputEvents?(.showTermsOfUseAndPrivacyPolicy)
+            case .showSubscriptionTerms:
+                self?.outputEvents?(.showSubscriptionTerms)
+            }
+        })
         self.fillContentModels()
         self.bind()
     }
@@ -57,6 +70,10 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
             .self.disposed(by: self.dispose)
     }
     
+    func scrollTo(page: IndexPath) {
+        self.rootView?.collectionView?.scrollToItem(at: page, at: .centeredHorizontally, animated: true)
+    }
+    
     // MARK: -
     // MARK: Private
     
@@ -64,10 +81,6 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
         for model in DashboardContentModel.allCases {
             self.contentModels.append(model)
         }
-    }
-    
-    func scrollTo(page: IndexPath) {
-        self.rootView?.collectionView?.scrollToItem(at: page, at: .centeredHorizontally, animated: true)
     }
     
     // MARK: -
@@ -96,6 +109,5 @@ class DashboardViewController: UIViewController, RootViewGettable, UICollectionV
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.rootView?.configurePager()
-        self.rootView?.handleTermsMessageVisibility()
     }
 }
